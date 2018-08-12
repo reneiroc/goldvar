@@ -119,3 +119,61 @@ gulp.task('dev', ['css', 'js', 'browserSync'], function() {
   gulp.watch('./js/*.js', ['js']);
   gulp.watch('./*.html', browserSync.reload);
 });
+
+
+
+
+//************************************************************
+// Copy third party libraries from /node_modules into /dist/vendor
+//Adicional para coiar las carpetas y archivos para la versionde produccion
+// RC 12-08-18
+//************************************************************
+gulp.task('copy_dist', function() {
+
+// Copia css, mail, index
+
+  gulp.src('css/*.min.css')
+    .pipe(gulp.dest('dist/css'));
+  gulp.src('img/**/*')
+    .pipe(gulp.dest('dist/img/'));
+  gulp.src('mail/contact_me.php')
+    .pipe(gulp.dest('dist/mail'));
+  gulp.src('js/*.min.js')
+    .pipe(gulp.dest('dist/js'));
+  gulp.src('index.html')
+    .pipe(gulp.dest('dist/'));
+
+  // Bootstrap
+  gulp.src([
+      './node_modules/bootstrap/dist/**/*',
+      '!./node_modules/bootstrap/dist/css/bootstrap-grid*',
+      '!./node_modules/bootstrap/dist/css/bootstrap-reboot*'
+    ])
+    .pipe(gulp.dest('./dist/vendor/bootstrap'))
+
+  // Font Awesome
+  gulp.src([
+      './node_modules/font-awesome/**/*',
+      '!./node_modules/font-awesome/{less,less/*}',
+      '!./node_modules/font-awesome/{scss,scss/*}',
+      '!./node_modules/font-awesome/.*',
+      '!./node_modules/font-awesome/*.{txt,json,md}'
+    ])
+    .pipe(gulp.dest('./dist/vendor/font-awesome'))
+
+  // jQuery
+  gulp.src([
+      './node_modules/jquery/dist/*',
+      '!./node_modules/jquery/dist/core.js'
+    ])
+    .pipe(gulp.dest('./dist/vendor/jquery'))
+
+  // jQuery Easing
+  gulp.src([
+      './node_modules/jquery.easing/*.js'
+    ])
+    .pipe(gulp.dest('./dist/vendor/jquery-easing'))
+
+});
+
+
