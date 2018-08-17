@@ -1,6 +1,7 @@
 // Styling for the navbar
 #mainNav {
-  background-color: $gray-900;
+  background-color: white;
+  box-shadow: rgba(0,0,0,.117647) 0 1px 3px;
   .navbar-toggler {
     font-size: 12px;
     right: 0;
@@ -10,10 +11,21 @@
     border: 0;
     background-color: $primary;
     @include heading-font;
+   
   }
   .navbar-brand {
-    color: $primary;
+    //color: $primary;
+    color: $gray-900;
+    
     @include script-font;
+    //Added to put logo image (smallest)
+    //***********
+    width:130px;
+    height:45px;
+    background-image:url(../img/logosmallest.png);
+    background-repeat:no-repeat;
+    
+    //*********** 
     &.active,
     &:active,
     &:focus,
@@ -28,11 +40,17 @@
         font-weight: 400;
         padding: 0.75em 0;
         letter-spacing: 1px;
-        color: white;
+        color: black;
         @include heading-font;
+        transition: border-width 0.1s linear;
         &.active,
         &:hover {
-          color: $primary;
+          //color: $primary;
+          border-bottom-color: #8bdde5;
+          border-bottom-style: solid;
+          border-bottom-width: 5px;
+          
+          
         }
       }
     }
@@ -47,26 +65,48 @@
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
     background-color: transparent;
+    box-shadow:none;
     .navbar-brand {
       font-size: 1.75em;
+      
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s;
+      //RC*********
+      width:260px;
+      height:90px;
+      background-image:url(../img/logobig.png);//RC
+      background-repeat:no-repeat;
+      //***********
     }
+
+
+
     .navbar-nav {
       .nav-item {
         .nav-link {
           padding: 1.1em 1em !important;
+          
         }
+
       }
     }
     &.navbar-shrink {
-      padding-top: 0;
+      padding-top: 10px;
       padding-bottom: 0;
-      background-color: $gray-900;
+      background-color: white;
+      box-shadow: rgba(0,0,0,.117647) 0 1px 3px;
+      ul{
+        margin-top: 12px;
+      }
       .navbar-brand {
+        //RC********
+        height:70px;
+        background-image:url(../img/logosmall.png);//RC
+       //********
         font-size: 1.25em;
         padding: 12px 0;
+        
       }
     }
   }

@@ -37,6 +37,8 @@ Forces image to be 100% width and not max width of 100%
   width:100%;
 }
 
+
+
 /* 
 anchors are inline so you need ot make them block to go full width
 */
@@ -52,7 +54,7 @@ anchors are inline so you need ot make them block to go full width
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -92,7 +94,7 @@ anchors are inline so you need ot make them block to go full width
         </ol>
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
-                <a href="https://bootstrapcreative.com/">
+                <a href="#">
                     <!-- 
                     If you need more browser support use https://scottjehl.github.io/picturefill/
                     If a picture looks blurry on a retina device you can add a high resolution like this
@@ -101,38 +103,73 @@ anchors are inline so you need ot make them block to go full width
                     What image sizes should you use? This can help - https://codepen.io/JacobLett/pen/NjramL
                      -->
                      <picture>
-<!--
-                      <source srcset="https://dummyimage.com/2000x500/007aeb/4196e5" media="(min-width: 1400px)"> -->
-                        <source srcset="https://dummyimage.com/2000x1200/007aeb/4196e5" media="(min-width: 1400px)">
-<!--
-  2000x1200
-  1400x900
-  800x600
-  600x500
-                      <source srcset="https://dummyimage.com/1400x500/#007aeb/4196e5" media="(min-width: 769px)"> -->
-
-                      <source srcset="https://dummyimage.com/1400x900/#007aeb/4196e5" media="(min-width: 768px)">
-<!--
-                       <source srcset="https://dummyimage.com/800x500/007aeb/4196e5" media="(min-width: 577px)">
-                       -->
-                      <source srcset="https://dummyimage.com/800x600/007aeb/4196e5" media="(min-width: 577px)">
-<!--
-                      <img srcset="https://dummyimage.com/600x500/007aeb/4196e5" alt="responsive image" class="d-block img-fluid">
-
--->                      
-                      <img srcset="https://dummyimage.com/600x900/007aeb/4196e5" alt="responsive image" class="d-block img-fluid">
-
+                        <source srcset="img/slide/2000x1200/1.jpg" media="(min-width: 1400px)">
+                        <source srcset="img/slide/1400x700/1.jpg" media="(min-width: 768px)">
+                        <source srcset="https://dummyimage.com/800x600/007aeb/4196e5" media="(min-width: 577px)">
+                        <!--600x900-->
+                        <img srcset="img/slide/600x900/1.jpg" alt="responsive image" class="d-block img-fluid">
                     </picture>
 
                     <div class="carousel-caption">
-                        <div>
+                        <div class="container">
                             <h2>Digital Craftsmanship</h2>
                             <p>We meticously build each site to get results</p>
-                            <span class="btn btn-sm btn-outline-secondary">Learn More</span>
+                            <span class="btn btn-primary btn-lg text-uppercase js-scroll-trigger">Learn More</span>
+                        
+
                         </div>
                     </div>
                 </a>
-            </div>
+        </div>
+      
+        <!-- Slide item -->
+        <div class="carousel-item">
+            <a href="https://bootstrapcreative.com/">
+                 <picture>
+                  <source srcset="img/slide/2000x1200/2.jpg" media="(min-width: 1400px)">
+                  <source srcset="img/slide/1400x700/2.jpg" media="(min-width: 768px)">
+                   <source srcset="https://dummyimage.com/800x500/007aeb/4196e5" media="(min-width: 577px)">
+                  <img srcset="img/slide/600x900/2.jpg" alt="responsive image" class="d-block img-fluid">
+                </picture>
+
+                <div class="carousel-caption justify-content-center align-items-center">
+                    <div>
+                        <h2>Every project begins with a sketch</h2>
+                        <p>We work as an extension of your business to explore solutions</p>
+                        <span class="btn btn-sm btn-outline-secondary">Our Process</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Slide item -->
+        <div class="carousel-item">
+            <a href="https://bootstrapcreative.com/">
+                 <picture>
+                  <source srcset="img/slide/2000x1200/3.jpg" media="(min-width: 1400px)">
+                  <source srcset="img/slide/1400x700/3.jpg" media="(min-width: 768px)">
+                   <source srcset="https://dummyimage.com/800x500/007aeb/4196e5" media="(min-width: 577px)">
+                  <img srcset="img/slide/600x900/3.jpg" alt="responsive image" class="d-block img-fluid">
+                </picture>
+
+                <div class="carousel-caption justify-content-center align-items-center">
+                    <div>
+                        <h2>Every project begins with a sketch</h2>
+                        <p>We work as an extension of your business to explore solutions</p>
+                        <span class="btn btn-sm btn-outline-secondary">Our Process</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+<!--     <header class="masthead">
+      <div class="container">
+        <div class="intro-text">
+          <div class="intro-lead-in">Welcome To Our Studio!</div>
+          <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+        </div>
+      </div>
+    </header> -->
+
             <!-- /.carousel-item -->
 
           <!--   <div class="carousel-item">
@@ -193,7 +230,7 @@ anchors are inline so you need ot make them block to go full width
 
 
     <!-- Header -->
-    <header class="masthead">
+  <!--   <header class="masthead">
       <div class="container">
         <div class="intro-text">
           <div class="intro-lead-in">Welcome To Our Studio!</div>
@@ -201,7 +238,7 @@ anchors are inline so you need ot make them block to go full width
           <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
         </div>
       </div>
-    </header>
+    </header> -->
 
     <!-- Services -->
     <section id="services">
