@@ -1,2 +1,3 @@
-node_modules
+# Archivos y directorios ignorados
+node_modules/
 sftp-config.json
